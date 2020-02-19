@@ -1,0 +1,31 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.8.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-web'
+
+    compile group: 'org.springframework', name: 'spring-aop', version: '5.0.16.RELEASE'
+    compile group: 'org.aspectj', name: 'aspectjrt', version: '1.9.4'
+    compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.4'
+
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.18.2'
+
+    annotationProcessor group:'org.projectlombok', name:'lombok', version:'1.18.2'
+
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile group: 'org.projectlombok', name: 'lombok', version: '1.18.2'
+
+    testAnnotationProcessor group:'org.projectlombok', name:'lombok', version:'1.18.2'
+}
